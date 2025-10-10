@@ -1,0 +1,115 @@
+name: aurum_call
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+# TODO: 語法建議
+#  1. flutter pub deps
+#     👉 查看套件實際運作的版本與依賴樹，用於確認 pubspec.yaml 宣告版本 vs 真實版本差異
+#  2. flutter doctor -v
+#     👉 檢查當前 Flutter 環境設定與 SDK 版本 (含 Dart/Android/iOS)，用於診斷環境問題與工具安裝狀況
+#  3. flutter clean
+#     👉 清理 build cache、暫存檔案與已下載的依賴，適用於編譯異常或套件版本衝突時
+#  4. flutter pub get
+#     👉 重新抓取並安裝 pubspec.yaml 裡定義的依賴套件，適用於新增/修改套件後
+#  5. flutter pub outdated
+#     👉 檢查目前套件版本、允許範圍內的最新版本、與 pub.dev 最新版
+#  6. flutter run
+#     👉 在連接的模擬器或實體裝置上執行專案
+#  7. flutter build apk --release
+#     👉 打包成 Android APK 釋出檔
+#  8. flutter build ios --release
+#     👉 打包成 iOS ipa（需搭配 Xcode）
+#  9. flutter pub run flutter_launcher_icons:main
+#     👉 執行 flutter_launcher_icons 套件指令產生 Android 各尺寸 APP Icon
+
+dependencies:
+  flutter:
+    # TODO: Flutter SDK 3.35.3 | Dart SDK 3.9.2
+    sdk: flutter
+
+  # TODO: 新增 google_maps_flutter 套件(運行版本 ???)，作用於「地圖服務」
+  google_maps_flutter: ^2.13.1 # https://pub.dev/packages/google_maps_flutter
+
+  # TODO: 新增 cupertino_icons 套件(運行版本 1.0.8)，作用於「提供 iOS Cupertino 樣式圖示，UI/UX 美化」
+  cupertino_icons: ^1.0.2 # https://pub.dev/packages/cupertino_icons
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # TODO: 新增 flutter_launcher_icons 套件(運行版本 0.13.1)，作用於「自動生成 Android/iOS APP 啟動圖示」
+  flutter_launcher_icons: ^0.13.1 # https://pub.dev/packages/flutter_launcher_icons
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/app_icon.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
+
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
