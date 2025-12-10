@@ -46,24 +46,75 @@ dependencies:
     # TODO: Flutter SDK 3.35.3 | Dart SDK 3.9.2
     sdk: flutter
 
-  # TODO: 新增 google_maps_flutter 套件(運行版本 ???)，作用於「地圖服務」
+  # TODO: 新增 google_maps_flutter 套件（版本 2.13.1）
+  #  作用：「地圖核心套件」
+  #  提供 Google Maps 原生支援（Android/iOS），包含 Marker、Camera、Polyline 等功能。
+  #  未來用於：補給站節點、災情上報區塊、志工位置、危險區域顯示等。
   google_maps_flutter: ^2.13.1 # https://pub.dev/packages/google_maps_flutter
 
-  # TODO: 新增 cupertino_icons 套件(運行版本 1.0.8)，作用於「提供 iOS Cupertino 樣式圖示，UI/UX 美化」
+  # TODO: 新增 google_maps_flutter_web 套件（Web 端地圖支援）
+  #  若後續製作 PWA/Web 版本，必須加入此套件。
+  #  作用：Web 專用的 Google Maps plugin，整合 JS API。
+  google_maps_flutter_web: ^0.5.0 # https://pub.dev/packages/google_maps_flutter_web
+
+  # TODO: 新增 geolocator 套件（定位支援）
+  #  用途：取得 GPS 位置、精準度、速度、方向等資訊。
+  #  用於：地圖定位、導航、災區定位、志工狀態同步。
+  geolocator: ^12.0.0 # https://pub.dev/packages/geolocator
+
+  # TODO: Firebase 核心初始化（必備）
+  #  Aurora Call 的資料架構將建立在 Firebase 上，包括：Firestore、Storage、Auth、Messaging。
+  firebase_core: ^3.0.0
+
+  # TODO: 新增 Firebase Auth 套件
+  #  用於：使用者登入、身分識別、志願者認證、補給站管理者登入。
+  firebase_auth: ^5.0.0
+
+  # TODO: 新增 Cloud Firestore 套件
+  #  作用：資料庫服務 → 儲存災害資訊、補給站資料、志工狀態、回報內容等。
+  cloud_firestore: ^5.6.12
+
+  # TODO: 新增 Firebase Storage 套件
+  #  用於：上傳照片、影片（ex: 災情照片、現場狀況）。
+  firebase_storage: ^12.0.0
+
+  # TODO: 新增 Firebase Messaging 套件
+  #  用於：推播警報、災情通知、社區事件提醒。
+  firebase_messaging: ^15.1.0
+
+  # TODO: 新增 provider 套件（狀態管理）
+  #  作用：輕量級狀態管理，用於地圖狀態、使用者狀態、資料同步。
+  provider: ^6.0.0 # https://pub.dev/packages/provider
+
+  # TODO: 新增 youtube_player_flutter 套件
+  #  用於：嵌入 YouTube Live（觀測站直播、海岸攝影機監控）
+  youtube_player_flutter: ^9.0.0
+
+  # TODO: 新增 googleapis 套件
+  #  用途：與 YouTube API、地圖 API、其他 Google 服務串接（高階功能用）
+  googleapis: ^14.0.0
+
+  # TODO: 新增 lottie 套件（動畫功能）
+  #  用於：後續美化 → 警報動畫、補給站脈動、載入動畫等。
+  #  現階段暫不使用，但保留擴展能力。
+  lottie: ^3.1.0
+
+  # TODO: 新增 flutter_cache_manager 套件
+  #  用於：快取圖片、地圖瓦片、災情資料
+  #  有助於未來實作「離線模式」或「低網路環境」功能。
+  flutter_cache_manager: ^3.4.0
+
+  # iOS Cupertino Icons
   cupertino_icons: ^1.0.2 # https://pub.dev/packages/cupertino_icons
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # TODO: 新增 flutter_launcher_icons 套件(運行版本 0.13.1)，作用於「自動生成 Android/iOS APP 啟動圖示」
-  flutter_launcher_icons: ^0.13.1 # https://pub.dev/packages/flutter_launcher_icons
+  # TODO: 新增 flutter_launcher_icons 套件
+  #  用於：根據 app_icon.png 自動生成 Android/iOS 多尺寸 APP Icon
+  flutter_launcher_icons: ^0.13.1
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
